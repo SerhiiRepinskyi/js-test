@@ -134,7 +134,7 @@
 // }
 
 // ЗАДАЧА 9
-// НАПИШІТЬ ЦИКЛ FOR ЯКА БУДЕ ВИВОДИТИ У КОНСОЛЬ ЧИСЛА ЗА ЗРОСТАННЯМ ВІД MIN ДО MAX, ПІСЛЯ ТОГО ЧИСЛА КРАТНІ 10
+// НАПИШІТЬ ЦИКЛ FOR, ЯКИЙ БУДЕ ВИВОДИТИ У КОНСОЛЬ ЧИСЛА ЗА ЗРОСТАННЯМ ВІД MIN ДО MAX, ПІСЛЯ ТОГО ЧИСЛА КРАТНІ 10
 
 // const min = 10;
 // const max = 100;
@@ -177,9 +177,109 @@
 // "Яка офіційна назва JavaScript?" Якщо користувач вводить "ECMAScript",
 // то показати через alert: "Вірно!" В іншому випадку відобразити: "Не знаєте? ECMAScript!"
 
-const nameJavaScript = prompt("Яка офіційна назва JavaScript?");
+// const nameJavaScript = prompt("Яка офіційна назва JavaScript?");
 
-if (nameJavaScript === "ECMAScript") {
-  alert("Вірно!");
-} else alert("Не знаєте? ECMAScript!");
+// if (nameJavaScript === "ECMAScript") {
+//   alert("Вірно!");
+// } else alert("Не знаєте? ECMAScript!");
+
+// ЗАДАЧА 12
+// Напишіть програму, яка отримає від користувача число (кількість хвилин) і виведе в консоль стрічку в форматі годин і хвилин
+// https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+// 70 === 01:10
+
+// const minutesInput = prompt("Введіть кількість хвилин:");
+
+// // Перетворення введеного значення в число
+// const totalMinutes = parseInt(minutesInput);
+
+// // Розрахунок годин і хвилин
+// const hours = Math.floor(totalMinutes / 60);
+// const remainingMinutes = totalMinutes % 60;
+
+// // Форматування годин і хвилин за допомогою padStart
+// const formattedHours = String(hours).padStart(2, "0");
+// const formattedMinutes = String(remainingMinutes).padStart(2, "0");
+
+// // Формування результуючої стрічки
+// const result = `${formattedHours}:${formattedMinutes}`;
+
+// console.log(result);
+
+// ЗАДАЧА 13
+// ЗА ДОПОМОГОЮ ЦИКЛУ FOR ДОДАЙТЕ ВСІ ПАРНІ ЧИСЛА ВІД MIN ДО MAX
+
+// let min = 3;
+// const max = 11;
+
+// let sum = 0;
+// let array = []; // Масив парних чисел
+
+// // Перевіряємо, чи min парне. Якщо ні, збільшуємо його на 1
+// if (min % 2 !== 0) {
+//   min++;
+// }
+// // min = min % 2 !== 0 ? min + 1 : min;
+
+// // Цикл, який додає парні числа від min до max
+// for (let i = min; i <= max; i += 2) {
+//   sum += i;
+//   array.push(i);
+// }
+
+// console.log(sum);
+// console.log(array);
+
+// ЗАДАЧА 14
+// Напишіть код, який запитуватиме логін за допомогою prompt і логуватиме результат у консоль браузера.
+// Якщо відвідувач вводить "Адмін", то prompt запитує пароль.
+// Якщо нічого не ввели або натиснуто клавішу Esc вивести рядок "Скасовано".
+// В іншому випадку вивести рядок "Я вас не знаю".
+
+// Пароль перевіряти так:
+// якщо введено пароль "Я головний", то вивести рядок "Привіт!", інакше виводити рядок "Невірний пароль!".
+
+// let login = prompt("Введіть логін:", "");
+// console.log(login);
+
+// if (login === "Адмін") {
+//   let password = prompt("Введіть пароль:", "");
+
+//   if (password === "Я головний") {
+//     console.log("Привіт!");
+//   } else if (password === null || password === "") {
+//     console.log("Скасовано");
+//   } else {
+//     console.log("Невірний пароль!");
+//   }
+// } else if (login === null || login === "") {
+//   console.log("Скасовано");
+// } else {
+//   console.log("Я вас не знаю");
+// }
+
+// ЗАДАЧА 15
+// При завантаженні сторінки користувачеві пропонується ввести число.
+// Введене число додається до значення змінної total.
+// Операція введення числа продовжується до тих пір, поки користувач не натисне кнопку Cancel в prompt.
+// Після того, як користувач припинив введення натиснувши на кнопку Cancel,
+// показати alert зі стрічкою "Загальна сума введених чисел рівна [число]."
+// Робити перевірку, що користувач ввів саме число, а не довільний набір символів, не потрібно.
+
+let total = 0;
+
+while (true) {
+  let userInput = prompt("Введіть число:");
+
+  // Перевірка, чи користувач натиснув "Cancel" або ввів недійсне число
+  if (userInput === null || isNaN(userInput)) {
+    break; // Вихід із циклу, якщо користувач натиснув "Cancel" або ввів недійсне число
+  }
+
+  // Додавання числа до загальної суми
+  total += Number(userInput);
+}
+
+// Виведення результату у вигляді alert
+alert(`Загальна сума введених чисел рівна ${total}.`);
 
