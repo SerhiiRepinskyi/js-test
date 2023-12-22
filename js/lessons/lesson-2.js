@@ -202,21 +202,89 @@
 // - замінює значення premium на false
 // - виводить отриманий обєкта user в форматі ключ: значення, використовуючи  Object.keys() і for...of
 
-const user = {
-  name: "Mango",
-  age: 20,
-  hobby: "html",
-  premium: true,
-};
+// const user = {
+//   name: "Mango",
+//   age: 20,
+//   hobby: "html",
+//   premium: true,
+// };
 
-user.mood = "happy";
-user.hobby = "skydiving";
-user.premium = false;
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
 
-console.log(Object.keys(user));
+// console.log(Object.keys(user));
 
-const keys = Object.keys(user);
+// const keys = Object.keys(user);
 
-for (const key of keys) {
-  console.log(`${key}: ${user[key]}`);
-}
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
+
+// ЗАДАЧА 11
+// У вас є об'єкт, у якому зберігаються зарплати нашої команди.
+// Напишіть код, для підрахунку всіх зарплат і збережіть результат в змінній sum.
+// Маємо отримати 390. Якщо об'єкт salaries пустий, то результат буде 0.
+// ДЛЯ ПЕРЕВИКОРИСТАННЯ ЛОГІКИ, ПИШІТЬ ФУНКЦІЮ!
+
+// const salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+
+// function calculateTotalSalary(salaries) {
+//   const keys = Object.keys(salaries);
+//   let sum = 0;
+
+//   for (const key of keys) {
+//     sum += salaries[key];
+//   }
+
+//   return sum;
+// }
+
+// console.log(calculateTotalSalary(salaries)); // 390
+
+// ЗАДАЧА 12
+// Створи об'єкт calculator(калькулятор) з 3-ма методами:
+// read()- запрошує 2 значення і зберігає їх як значення об'єкта;
+// sum() - повертає суму збережених значень;
+// mult() - перемножує значення збережені і повертає результат;
+
+// const calculator = {
+//   a: null,
+//   b: null,
+
+//   read() {
+//     this.a = Number.parseInt(prompt("Введіть перше ціле число:", ""));
+//     this.b = Number.parseInt(prompt("Введіть друге ціле число:", ""));
+//     return console.log(`a = ${this.a}; b = ${this.b}`);
+//   },
+
+//   sum() {
+//     if (this.a === null || this.b === null) {
+//       console.log("Будь ласка, викличте read() перед використанням sum()");
+//       return null;
+//     }
+
+//     const sum = this.a + this.b;
+//     console.log(`sum = ${sum}`);
+//     return sum;
+//   },
+
+//   mult() {
+//     if (this.a === null || this.b === null) {
+//       console.log("Будь ласка, викличте read() перед використанням mult()");
+//       return null;
+//     }
+
+//     const mult = this.a * this.b;
+//     console.log(`mult = ${mult}`);
+//     return mult;
+//   },
+// };
+
+// calculator.read();
+// console.log(calculator.sum());
+// console.log(calculator.mult());

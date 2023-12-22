@@ -25,7 +25,7 @@
 
 // const tv = Number(prompt("Введіть ціну телевізора"));
 // const phone = Number(prompt("Введіть ціну телефону"));
-// const computer = +prompt("Введіть ціну комп'ютеру"); // використання "+" - погана практика, краще використовувати Number
+// const computer = +prompt("Введіть ціну комп'ютера"); // використання "+" - погана практика, краще використовувати Number
 
 // const sum = tv + phone + computer;
 
