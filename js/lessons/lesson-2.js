@@ -75,8 +75,8 @@
 
 // ЗАДАЧА 4
 // Перевірте, чи являється рядок полідромом
-const str = "ротатор"; // true
-const newString = "Hello"; // false
+// const str = "ротатор"; // true
+// const newString = "Hello"; // false
 
 // Варіант 1
 // function isPolidrom(str) {
@@ -95,11 +95,128 @@ const newString = "Hello"; // false
 // isPolidrom(newString);
 
 // Варіант 2
-function isPolidrom(str) {
-  const reverseStr = str.split("").reverse().join("");
+// function isPolidrom(str) {
+//   const reverseStr = str.split("").reverse().join("");
 
-  return console.log(str === reverseStr);
+//   return console.log(str === reverseStr);
+// }
+
+// isPolidrom(str);
+// isPolidrom(newString);
+
+// ЗАДАЧА 5
+// Напишіть ф-цію calculateAverage() яка приймає довільну кількість аргументів і повертає їх середнє значення. Всі аргументи будуть тільки числовими.
+
+// console.log(calculateAverage(1, 2, 3, 4)); // 2.5
+// console.log(calculateAverage(14, 8, 2)); // 8
+// console.log(calculateAverage(27, 43, 2, 8, 36));// 23.2
+
+// function calculateAverage() {
+//   let sum = 0;
+
+//   const numbers = Array.from(arguments);
+
+//   for (const number of numbers) {
+//     sum += number;
+//   }
+//   const result = sum / numbers.length;
+//   return result;
+// }
+
+// console.log(calculateAverage(1, 2, 3, 4)); // 2.5
+// console.log(calculateAverage(14, 8, 2)); // 8
+// console.log(calculateAverage(27, 43, 2, 8, 36)); // 23.2
+
+// ЗАДАЧА 6
+// Напишіть ф-цію greet(name), яка при виклику буде отримувати імя (як приклад, "Василь"), і логінувати рядок "Привіт, <імя>". У випадку, відсутнього значення, виводе аргумент "Привіт, гість"
+// console.log(greet("Василь")); // Привіт Василь
+// console.log(greet()); // Привіт гість
+
+// function greet(name = "гість") {
+//   let message = `Привіт ${name}`;
+//   return message;
+// }
+
+// console.log(greet("Василь")); // Привіт Василь
+// console.log(greet()); // Привіт гість
+
+// ЗАДАЧА 7
+// Виконайте рефакторинг, замінивши обявлення ф-ції з function declaration на function expression та на стрілочну функцію
+
+// function checkNumbers(a, b) {
+//   if (a > b) {
+//     return `число ${a} більше ${b}`;
+//   }
+//   return `число ${b} більше ${a}`;
+// }
+
+// const checkNumbers = function (a, b) {
+//   if (a > b) {
+//     return `число ${a} більше ${b}`;
+//   }
+//   return `число ${b} більше ${a}`;
+// };
+
+// const checkNumbers = (a, b) => {
+//   if (a > b) {
+//     return `число ${a} більше ${b}`;
+//   }
+//   return `число ${b} більше ${a}`;
+// };
+
+// const checkNumbers = (a, b) =>
+//   a > b ? `число ${a} більше ${b}` : `число ${b} більше ${a}`;
+
+// console.log(checkNumbers(5, 10));
+
+// ЗАДАЧА 8
+// Напишіть ф-цію capitalize, яка буде приймати рядок і буде повертати новий рядок, де кожне слово буде з великої букви
+// capitalize('the quick brown fox') // 'The Quick Brown Fox'
+
+// function capitalize(string) {
+//   const wordsArray = string.split(" ");
+//   const resArray = [];
+
+//   for (const element of wordsArray) {
+//     const lowWord = element[0].toUpperCase();
+//     // console.log(lowWord);
+
+//     const newElement = element.slice(1);
+//     // console.log(newElement);
+
+//     const result = `${lowWord}${newElement}`;
+//     // console.log("Результат:", result);
+
+//     resArray.push(result);
+//   }
+
+//   return resArray.join(" ");
+// }
+
+// console.log(capitalize("the quick brown fox"));
+
+// ЗАДАЧА 10
+// Напишіть скрипт,для обєкта user в послідовності:
+// - додає поле mood із значенням 'happy'
+// - замінює значення hobby на 'skydiving'
+// - замінює значення premium на false
+// - виводить отриманий обєкта user в форматі ключ: значення, використовуючи  Object.keys() і for...of
+
+const user = {
+  name: "Mango",
+  age: 20,
+  hobby: "html",
+  premium: true,
+};
+
+user.mood = "happy";
+user.hobby = "skydiving";
+user.premium = false;
+
+console.log(Object.keys(user));
+
+const keys = Object.keys(user);
+
+for (const key of keys) {
+  console.log(`${key}: ${user[key]}`);
 }
-
-isPolidrom(str);
-isPolidrom(newString);
