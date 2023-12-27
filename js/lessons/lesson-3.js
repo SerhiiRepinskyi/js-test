@@ -205,46 +205,197 @@
 // Зібрати в allTopics масив усіх предметів всіх курсів, використовуючи flatMap.
 // Використовуючи Array.prototype.filter, виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи.
 
-const courses = [
-  {
-    name: "Basic HTML+CSS",
-    topics: ["VSCode", "HTML", "CSS", "GitHub Desktop", "GitHub"],
-  },
-  {
-    name: "Intermediate HTML+CSS",
-    topics: ["VSCode", "Terminal", "Git", "GitHub", "HTML", "CSS"],
-  },
-  {
-    name: "Basic JavaScript",
-    topics: [
-      "VSCode",
-      "Type system",
-      "Loops",
-      "Functions",
-      "Conditions",
-      "Classes",
-      "DOM",
-      "Git",
-      "GitHub",
-    ],
-  },
-  {
-    name: "Intermediate JavaScript",
-    topics: [
-      "VSCode",
-      "NPM",
-      "Bundlers",
-      "Transpiling",
-      "Promises",
-      "AJAX",
-      "Git",
-      "GitHub",
-    ],
-  },
-];
+// const courses = [
+//   {
+//     name: "Basic HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub Desktop", "GitHub"],
+//   },
+//   {
+//     name: "Intermediate HTML+CSS",
+//     topics: ["VSCode", "Terminal", "Git", "GitHub", "HTML", "CSS"],
+//   },
+//   {
+//     name: "Basic JavaScript",
+//     topics: [
+//       "VSCode",
+//       "Type system",
+//       "Loops",
+//       "Functions",
+//       "Conditions",
+//       "Classes",
+//       "DOM",
+//       "Git",
+//       "GitHub",
+//     ],
+//   },
+//   {
+//     name: "Intermediate JavaScript",
+//     topics: [
+//       "VSCode",
+//       "NPM",
+//       "Bundlers",
+//       "Transpiling",
+//       "Promises",
+//       "AJAX",
+//       "Git",
+//       "GitHub",
+//     ],
+//   },
+// ];
 
-const uniqueTopics = courses
-  .flatMap((course) => course.topics)
-  .filter((topic, index, array) => array.indexOf(topic) === index);
+// const uniqueTopics = courses
+//   .flatMap((course) => course.topics)
+//   .filter((topic, index, array) => array.indexOf(topic) === index);
 
-console.log(uniqueTopics);
+// console.log(uniqueTopics);
+
+// ЗАДАЧА 7 (1 ДЗ)
+// 1) Напишіть ф-ю конструктор, яка створює обєкт person з такимим ключами:
+// const Person = {
+//   firstName,
+//   lastName,
+//   age,
+//   gender,
+//   interest,
+//   bio() {
+// // виводить рядок Привіт, я {імя}, мені {вік} років. Мені подобається {інтерес}
+//   },
+//   greeting() {
+//     // Привіт, я {імя}
+//   },
+// };
+// const user = new Person("Den", "Dounot", 40, "male", "React");
+
+// class Person {
+//   constructor({ firstName, lastName, age, gender, interest } = {}) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//     this.gender = gender;
+//     this.interest = interest;
+//   }
+
+//   bio() {
+//     console.log(
+//       `Привіт, я ${this.firstName}, мені ${this.age} років. Мені подобається ${this.interest}`
+//     );
+//   }
+
+//   greeting() {
+//     console.log(`Привіт, я ${this.firstName}`);
+//   }
+// }
+
+// const result = new Person({
+//   firstName: "Den",
+//   lastName: "Dounot",
+//   age: 40,
+//   gender: "male",
+//   interest: "React",
+// });
+
+// console.log(result.bio());
+// console.log(result.greeting());
+
+// ЗАДАЧА 8 (2 ДЗ)
+// Напишіть клас User для створення користувача з наступними властивостями:
+// username - імя, рядок
+// age - вік, число
+// numberOfPosts - кількість постів, число
+// Клас очікує один параметр - об'єкт налаштувань з однойменними властивостями.
+// Добавте метод getInfo(), який повертає рядок:
+// User ${ імя } is ${ вік } years old and has ${ кількість постів } posts.
+
+// class User {
+//   constructor({ username, age, numberOfPosts } = {}) {
+//     this.username = username;
+//     this.age = age;
+//     this.numberOfPosts = numberOfPosts;
+//   }
+
+//   getInfo() {
+//     return `User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`;
+//   }
+// }
+
+// const result = new User({ username: "Igor", age: 38, numberOfPosts: 5 });
+// console.log(result.getInfo());
+
+// ЗАДАЧА 9 (3 ДЗ)
+// Напиши клас Storage який створює об'єкт керування складом товарів.
+// При виклику отримуватиме один аргумент - початковий масив товарів, і записуватиме його у властивість items.
+// Добайте методи класу:
+// getItems() - повертає масив товарів.
+// addItem(item) - отримує новий товар та додає його до поточних.
+// removeItem(item) - отримає товар і, якщо він є, видаляє його з поточних.
+
+// const items = new Storage(["Виноград", "Банани", "Кокоси", "Ківі"]);
+// items.addItem("Манго");
+// items.removeItem("Ківі")
+
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+//   getItems() {
+//     return this.items;
+//   }
+//   addItem(item) {
+//     this.items.push(item);
+//   }
+//   removeItem(item) {
+//     const index = this.items.indexOf(item);
+//     this.items.splice(index, 1);
+//   }
+// }
+
+// const items = new Storage(["Виноград", "Банани", "Кокоси", "Ківі"]);
+
+// console.log(items.addItem("Манго"));
+// console.log(items.removeItem("Ківі"));
+
+// console.table(items);
+
+// ЗАДАЧА 10 (4 ДЗ)
+// Напиши клас Client який створює об'єкт із властивостями login і email.
+// Оголоси приватні властивості #login і #email, доступ до яких зроби через геттер та сеттер login і email.
+
+class Client {
+  #login;
+  #email;
+
+  constructor({ login, email }) {
+    this.#login = login;
+    this.#email = email;
+  }
+
+  get email() {
+    return this.#email;
+  }
+  get login() {
+    return this.#login;
+  }
+
+  set email(newEmail) {
+    this.#email = newEmail;
+  }
+  set login(newLogin) {
+    this.#login = newLogin;
+  }
+}
+
+const result = new Client({ login: "Neo", email: "my-email.com.ua" });
+
+console.log(result);
+
+// Викликаються геттери
+console.log(result.login);
+console.log(result.email);
+
+// Викликаються сеттери
+result.email = "my-new-email.com.ua";
+result.login = "Abvgd";
+
+// Викликаються геттери
+console.log(result.login);
+console.log(result.email);
