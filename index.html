@@ -4,10 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript test</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- ===For lesson-4.js task 1=== -->
-    <ul class="js-goods"></ul>
+    <!-- <ul class="js-goods"></ul> -->
+
+    <!-- ===For lesson-4.js task 2=== -->
+    <div class="container">
+      <h2 class="title">Скільки коштує мясо на шашлик? :)</h2>
+      <form class="form">
+        <label for="price">Ціна, грн.</label>
+        <input type="text" id="price" name="price" value="50" />
+        <label for="quantity">Кількість<span class="amount">1</span>кг</label>
+        <input
+          type="range"
+          id="quantity"
+          name="quantity"
+          value="1"
+          min="1"
+          ,
+          max="20"
+        />
+      </form>
+
+      <p class="text-right total"></p>
+    </div>
 
     <!-- <script src="./js/lessons/lesson-1.js"></script> -->
     <!-- <script src="./js/lessons/lesson-2.js"></script> -->
