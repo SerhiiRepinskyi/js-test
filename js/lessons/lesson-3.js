@@ -360,42 +360,42 @@
 // Напиши клас Client який створює об'єкт із властивостями login і email.
 // Оголоси приватні властивості #login і #email, доступ до яких зроби через геттер та сеттер login і email.
 
-class Client {
-  #login;
-  #email;
+// class Client {
+//   #login;
+//   #email;
 
-  constructor({ login, email }) {
-    this.#login = login;
-    this.#email = email;
-  }
+//   constructor({ login, email }) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
 
-  get email() {
-    return this.#email;
-  }
-  get login() {
-    return this.#login;
-  }
+//   get email() {
+//     return this.#email;
+//   }
+//   get login() {
+//     return this.#login;
+//   }
 
-  set email(newEmail) {
-    this.#email = newEmail;
-  }
-  set login(newLogin) {
-    this.#login = newLogin;
-  }
-}
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+// }
 
-const result = new Client({ login: "Neo", email: "my-email.com.ua" });
+// const result = new Client({ login: "Neo", email: "my-email.com.ua" });
 
-console.log(result);
+// console.log(result);
 
-// Викликаються геттери
-console.log(result.login);
-console.log(result.email);
+// // Викликаються геттери
+// console.log(result.login);
+// console.log(result.email);
 
-// Викликаються сеттери
-result.email = "my-new-email.com.ua";
-result.login = "Abvgd";
+// // Викликаються сеттери
+// result.email = "my-new-email.com.ua";
+// result.login = "Abvgd";
 
-// Викликаються геттери
-console.log(result.login);
-console.log(result.email);
+// // Викликаються геттери
+// console.log(result.login);
+// console.log(result.email);
