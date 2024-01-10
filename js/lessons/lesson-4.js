@@ -1,4 +1,4 @@
-// ЗАДАЧА 1
+// ========== ЗАДАЧА 1 ==========
 // Створіть карточки товару з масиву використовуючи createElement.
 
 // import cars from "../data/cars.js";
@@ -33,8 +33,9 @@
 
 // carsCardEl.append(...keys);
 
-// ЗАДАЧА 2
-// 2.1 НАПИШІТЬ КАЛЬКУЛЯТОР, ЯКИЙ БУДЕ РАХУВАТИ ЦІНУ ШАШЛИКА, В ЗАЛЕЖНОСТІ ВІД ЦІНИ ЗА КІЛОГРАМ І КІЛЬКОСТІ КУПЛЕНОГО ПРОДУКТА, І БУДЕ ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН.
+// ========== ЗАДАЧА 2 ==========
+// ========== ЗАДАЧА 2.1 ==========
+// НАПИШІТЬ КАЛЬКУЛЯТОР, ЯКИЙ БУДЕ РАХУВАТИ ЦІНУ ШАШЛИКА, В ЗАЛЕЖНОСТІ ВІД ЦІНИ ЗА КІЛОГРАМ І КІЛЬКОСТІ КУПЛЕНОГО ПРОДУКТА, І БУДЕ ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН.
 
 // const refs = {
 //   priceEl: document.querySelector("#price"),
@@ -67,7 +68,7 @@
 // // refs.formEl.addEventListener("input", calculator); // Результат відображається одразу при змінах в input
 // refs.formEl.addEventListener("submit", calculator);
 
-// ЗАДАЧА 2.2
+// ========== ЗАДАЧА 2.2 ==========
 // ПЕРЕПИШІТЬ КОД, ЩОБ ЗНАЧЕННЯ МИ ОТРИМУВАЛИ ПО КЛІЦІ НА КНОПКУ,
 // ПРИ НАТИСКАННІ ЯКОЇ БУДЕ ВАМ РАХУВАТИ ТА ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН
 // <button class="btn">Calculate</button>
@@ -80,7 +81,7 @@
 
 // refs.quantityEl.addEventListener("input", changeInputValue);
 
-// ЗАДАЧА 2.3
+// ========== ЗАДАЧА 2.3 ==========
 // НАПИШІТЬ РАНДОМНИЙ КОЛІР ДЛЯ НАШОЇ ФОРМИ КАЛЬКУЛЯТОРА ЗА ДОПОМОГОЮ ІНЛАЙНОВОГО СТИЛЮ
 
 // const randomRgbColor = () => {
@@ -92,7 +93,7 @@
 
 // refs.formCont.style.backgroundColor = randomRgbColor();
 
-// ЗАДАЧА 3
+// ========== ЗАДАЧА 3 ==========
 // 3.1 Є МАСИВ, ПОТРІБНО СТВОРИТИ РОЗМІТКУ ІЗ ТИХ КАРТОК ЧЕРЕЗ <ul class="js-list"></ul>
 
 // const instruments = [
@@ -159,93 +160,93 @@
 
 // ulEl.addEventListener("click", buy);
 
-// ЗАДАЧА 4
+// ========== ЗАДАЧА 4 ==========
 // ПОТРІБНО СТВОРИТИ Ф-ЦІЮ, ЯКА БУДЕ ШУКАТИ НАРЦИСА. ГОЛОВНА УМОВА - НАРЦИСА ЗНАЮТЬ УСІ, НАРЦИС НЕ ЗНАЄ НІКОГО.
 // є елемент масиву, який не знає нікого
 // якщо не одна така людина, то вертаємо not found
 // якщо один, то перевірити, чи його знають усі люди, якщо так то вертаємо found
 
-const people1 = [
-  {
-    name: "Alex",
-    know: ["Eva", "Jhon"],
-  },
-  {
-    name: "Ivan",
-    know: ["Jhon", "Alex"],
-  },
-  {
-    name: "Eva",
-    know: ["Alex", "Jhon"],
-  },
-  {
-    name: "Jhon",
-    know: [],
-  },
-];
+// const people1 = [
+//   {
+//     name: "Alex",
+//     know: ["Eva", "Jhon"],
+//   },
+//   {
+//     name: "Ivan",
+//     know: ["Jhon", "Alex"],
+//   },
+//   {
+//     name: "Eva",
+//     know: ["Alex", "Jhon"],
+//   },
+//   {
+//     name: "Jhon",
+//     know: [],
+//   },
+// ];
 
-const people2 = [
-  {
-    name: "Alex",
-    know: ["Eva", "Jhon"],
-  },
-  {
-    name: "Jhon",
-    know: ["Eva"],
-  },
-  {
-    name: "Eva",
-    know: [],
-  },
-  {
-    name: "Ivan",
-    know: ["Jhon", "Alex"],
-  },
-];
+// const people2 = [
+//   {
+//     name: "Alex",
+//     know: ["Eva", "Jhon"],
+//   },
+//   {
+//     name: "Jhon",
+//     know: ["Eva"],
+//   },
+//   {
+//     name: "Eva",
+//     know: [],
+//   },
+//   {
+//     name: "Ivan",
+//     know: ["Jhon", "Alex"],
+//   },
+// ];
 
-const people3 = [
-  {
-    name: "Alex",
-    know: ["Eva", "Jhon"],
-  },
-  {
-    name: "Jhon",
-    know: ["Eva"],
-  },
-  {
-    name: "Eva",
-    know: ["Alex", "Jhon"],
-  },
-  {
-    name: "Ivan",
-    know: ["Jhon", "Alex"],
-  },
-];
+// const people3 = [
+//   {
+//     name: "Alex",
+//     know: ["Eva", "Jhon"],
+//   },
+//   {
+//     name: "Jhon",
+//     know: ["Eva"],
+//   },
+//   {
+//     name: "Eva",
+//     know: ["Alex", "Jhon"],
+//   },
+//   {
+//     name: "Ivan",
+//     know: ["Jhon", "Alex"],
+//   },
+// ];
 
-function findNarcissist(people) {
-  // Знаходимо всіх, хто не знає нікого
-  const potentialNarcissists = people.filter(
-    (person) => person.know.length === 0
-  );
+// function findNarcissist(people) {
+//   // Знаходимо всіх, хто не знає нікого
+//   const potentialNarcissists = people.filter(
+//     (person) => person.know.length === 0
+//   );
 
-  // Якщо немає або більше одного такого кандидата, повертаємо "not found"
-  if (potentialNarcissists.length !== 1) {
-    return "not found";
-  }
+//   // Якщо немає або більше одного такого кандидата, повертаємо "not found"
+//   if (potentialNarcissists.length !== 1) {
+//     return "not found";
+//   }
 
-  const narcissist = potentialNarcissists[0];
+//   const narcissist = potentialNarcissists[0];
 
-  // Перевіряємо, чи його знають інші (виключаючи самого себе)
-  const everyoneKnowsNarcissist = people
-    .filter((person) => person.name !== narcissist.name)
-    .every((person) => person.know.includes(narcissist.name));
+//   // Перевіряємо, чи його знають інші (виключаючи самого себе)
+//   const everyoneKnowsNarcissist = people
+//     .filter((person) => person.name !== narcissist.name)
+//     .every((person) => person.know.includes(narcissist.name));
 
-  // return everyoneKnowsNarcissist ? "found" : "not found";
-  return everyoneKnowsNarcissist
-    ? `FOUND (Всі знають нарциса ${narcissist.name})`
-    : `NOT FOUND (НЕ всі знають нарциса ${narcissist.name})`;
-}
+//   // return everyoneKnowsNarcissist ? "found" : "not found";
+//   return everyoneKnowsNarcissist
+//     ? `FOUND (Всі знають нарциса ${narcissist.name})`
+//     : `NOT FOUND (НЕ всі знають нарциса ${narcissist.name})`;
+// }
 
-console.log(findNarcissist(people1));
-console.log(findNarcissist(people2));
-console.log(findNarcissist(people3));
+// console.log(findNarcissist(people1));
+// console.log(findNarcissist(people2));
+// console.log(findNarcissist(people3));
