@@ -46,7 +46,7 @@ input {
 } */
 
 /* ========== For lesson-5.js task 1 ==========  */
-html {
+/* html {
   box-sizing: border-box;
   background: #eeeeee;
   font-family: "helvetica neue";
@@ -148,10 +148,10 @@ body {
 
 .fixed-nav .logo {
   max-width: 500px;
-}
+} */
 
 /* ========== For lesson-5.js task 2 ==========  */
-p {
+/* p {
   line-height: 20px;
 }
 
@@ -159,4 +159,4 @@ p {
   height: 1800px;
   width: 500px;
   margin: 100px auto;
-}
+} */
